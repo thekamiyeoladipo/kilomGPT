@@ -67,12 +67,13 @@ function App() {
           </div>
         </div>
         <div className="chat-footer">
-          <div className="imp">
+          <div className="inp">
             <input type="text" placeholder="Send a message" />
             <button className="send">
               <img src={sendBtn} alt="Send" />
             </button>
           </div>
+          <p>KilomGPT may produce incorrect result</p>
         </div>
       </div>
     </div>
