@@ -9,7 +9,7 @@ import rocket from "./assets/rocket.svg";
 import sendBtn from "./assets/send.svg";
 import userIcon from "./assets/user-icon.png";
 import chatgptLogo from "./assets/chatgptLogo.svg";
-import hamburger from "./assets/list.svg";
+// import hamburger from "./assets/list.svg";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
