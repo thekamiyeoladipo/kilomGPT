@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Poppins", sans-serif;
   color: white;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
@@ -95,7 +95,7 @@ body {
   padding: 2.5rem;
 }
 
- .listItems {
+.listItems {
     margin: 1rem;
     display: flex;
     align-self: center;
@@ -119,8 +119,8 @@ body {
   }
 
   .chats {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
     width: 100%;
     max-width: 70rem;
     height: calc(100vh - 17rem);
@@ -128,7 +128,23 @@ body {
 
   .chat {
     margin: 1rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+  }
+  .chatImg {
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .bot {
+    background: slateblue;
+    width: fit-content;
+    border-radius: .5rem;
   }
 
   .chat-footer {
@@ -146,7 +162,7 @@ body {
     display: flex;
     align-items: center;
     border-radius: .5rem;
-    width: 70rem;
+    width: 65rem;
   }
 
   .inp>input {
@@ -163,3 +179,78 @@ body {
   .chat-footer>p {
     margin: 2rem 0;
   }
+
+  /* Backdrop when sidebar is open */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 500;
+}
+
+/* Hamburger button styling */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: transparent;
+  font-size: 3rem;
+  color: white;
+  border: none;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .App {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .sideBar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #1c1e3a;
+    width: 75%;
+    max-width: 300px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sideBar.open {
+    transform: translateX(0);
+  }
+
+  .main {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 5rem;
+    box-sizing: border-box;
+  }
+
+  .inp {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .midBtn,
+  .query {
+    width: 100%;
+  }
+
+  .chats {
+    height: auto;
+    max-height: none;
+  }
+}
