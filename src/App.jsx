@@ -9,7 +9,6 @@ import rocket from "./assets/rocket.svg";
 import sendBtn from "./assets/send.svg";
 import userIcon from "./assets/user-icon.png";
 import chatgptLogo from "./assets/chatgptLogo.svg";
-import sendMessage from "./openai"; // Assuming you have a function to send messages to OpenAI
 // import hamburger from "./assets/list.svg";
 
 function App() {
